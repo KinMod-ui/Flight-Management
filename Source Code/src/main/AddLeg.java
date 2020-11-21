@@ -442,7 +442,7 @@ public class AddLeg extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TFdistActionPerformed
 
-    private void bfetchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bfetchActionPerformed
+    private synchronized void bfetchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bfetchActionPerformed
         Flight_leg fl= new Flight_leg();
         Airplane aplane = new Airplane();
         Airport aport = new Airport();
@@ -538,7 +538,7 @@ public class AddLeg extends javax.swing.JFrame {
     
     
     
-    private void baddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baddActionPerformed
+    private synchronized void baddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baddActionPerformed
         Flight_leg fl= new Flight_leg();
         Airplane aplane = new Airplane();
         Airport aport = new Airport();
@@ -616,7 +616,7 @@ public class AddLeg extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_baddActionPerformed
 
-    private void bupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bupdateActionPerformed
+    private synchronized void bupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bupdateActionPerformed
         Flight_leg fl= new Flight_leg();
         Airplane aplane = new Airplane();
         Airport aport = new Airport();

@@ -243,7 +243,7 @@ public class AddPlane extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TFflightnumActionPerformed
 
-    private void bViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bViewActionPerformed
+    private synchronized void bViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bViewActionPerformed
         Airplane ap= new Airplane();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -273,7 +273,7 @@ public class AddPlane extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bViewActionPerformed
 
-    private void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
+    private synchronized void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
         Airplane ap= new Airplane();
         ap.setAirline(TFcompany.getText());
         ap.setMaximum_occupancy(Integer.parseInt(TFseats.getText()));
@@ -293,7 +293,7 @@ public class AddPlane extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bAddActionPerformed
 
-    private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpdateActionPerformed
+    private synchronized void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpdateActionPerformed
         Airplane ap= new Airplane();
         String flight_num = TFflightnum.getText();
         if (flight_num.length() == 0) {
@@ -324,7 +324,7 @@ public class AddPlane extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bUpdateActionPerformed
 
-    private void bGetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGetActionPerformed
+    private synchronized void bGetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGetActionPerformed
         Airplane ap= new Airplane();
         Is_number chk = new Is_number();
         String flight_num = TFflightnum.getText();
@@ -362,7 +362,7 @@ public class AddPlane extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bGetActionPerformed
 
-    private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
+    private synchronized void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
         Airplane ap= new Airplane();
         String flight_num = TFflightnum.getText();
         Is_number chk = new Is_number();

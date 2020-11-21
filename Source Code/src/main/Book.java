@@ -220,7 +220,7 @@ public class Book extends javax.swing.JFrame {
         return;
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void bsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsearchActionPerformed
+    private synchronized void bsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsearchActionPerformed
         Flight_leg fl= new Flight_leg();
         Airplane aplane = new Airplane();
         Airport aport = new Airport();
@@ -254,7 +254,7 @@ public class Book extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bsearchActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private synchronized void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        Ticket tk = new Ticket();
        Person p= new Person();
        Flight_leg fl= new Flight_leg();

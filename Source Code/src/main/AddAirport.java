@@ -234,7 +234,7 @@ public class AddAirport extends javax.swing.JFrame {
         return;
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void bViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bViewActionPerformed
+    private synchronized void bViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bViewActionPerformed
         Airport ap= new Airport();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -264,7 +264,7 @@ public class AddAirport extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bViewActionPerformed
 
-    private void bGetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGetActionPerformed
+    private synchronized void bGetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGetActionPerformed
         Airport ap= new Airport();
         ap.setAirport_num(Integer.parseInt(TFnum.getText()));
         try {
@@ -292,7 +292,7 @@ public class AddAirport extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bGetActionPerformed
 
-    private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
+    private synchronized void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
         Airport ap= new Airport();
         ap.setAirport_num(Integer.parseInt(TFnum.getText()));
         try {
@@ -314,7 +314,7 @@ public class AddAirport extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TFnumActionPerformed
 
-    private void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpdateActionPerformed
+    private synchronized void bUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bUpdateActionPerformed
         Airport ap= new Airport();
         ap.setAirport_num(Integer.parseInt(TFnum.getText()));
         try {
@@ -334,7 +334,7 @@ public class AddAirport extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bUpdateActionPerformed
 
-    private void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
+    private synchronized void bAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddActionPerformed
         Airport ap= new Airport();
         ap.setLocation(TFlocation.getText());
         ap.setName(TFname.getText());

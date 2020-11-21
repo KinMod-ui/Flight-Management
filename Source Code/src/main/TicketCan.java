@@ -148,7 +148,7 @@ public class TicketCan extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BcancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcancelActionPerformed
+    private synchronized void BcancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcancelActionPerformed
         Ticket tk= new Ticket();
         Flight_leg fl= new Flight_leg();
         tk.setTicket_num(Integer.parseInt(TFticknum.getText()));
@@ -181,7 +181,7 @@ public class TicketCan extends javax.swing.JFrame {
         return;
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void BshowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BshowActionPerformed
+    private synchronized void BshowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BshowActionPerformed
         Ticket tk= new Ticket();
         Person p= new Person();
         Airplane aplane = new Airplane();
